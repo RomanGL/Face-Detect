@@ -16,11 +16,12 @@ namespace FaceDetectApp.Tests
 
         protected override void ConfigureContainer()
         {
-            Container.RegisterType<IBlurService, TestBlurService>();
-            Container.RegisterType<IMessagesService, TestMessagesService>();
-            Container.RegisterType<INavigationService, TestNavigationService>();
-            Container.RegisterType<IFaceServiceClient, TestFaceServiceClient>();
-            Container.RegisterType<IProcessContext, TestFaceDetectProcessContext>(FACE_DETECT_CONTEXT_NAME);
+            Container.RegisterType<IBlurService, TestBlurService>(new ContainerControlledLifetimeManager());
+            Container.RegisterType<IMessagesService, TestMessagesService>(new ContainerControlledLifetimeManager());
+            Container.RegisterType<INavigationService, TestNavigationService>(new ContainerControlledLifetimeManager());
+            Container.RegisterType<IFaceServiceClient, TestFaceServiceClient>(new ContainerControlledLifetimeManager());
+            Container.RegisterType<IProcessContext, TestFaceDetectProcessContext>(FACE_DETECT_CONTEXT_NAME, 
+                new ContainerControlledLifetimeManager());
         }
 
         public const string FACE_DETECT_CONTEXT_NAME = "FaceDetectContext";

@@ -28,6 +28,7 @@ namespace FaceDetectApp.Core.ViewModels
         public Action<Face[], string> DrawAction { get; set; }
 
         public string PhotoPath { get; private set; }
+
         public ObservableCollection<string> Attributes { get; private set; }        
 
         public override void OnNavigatedTo(NavigationEventArgs e)
