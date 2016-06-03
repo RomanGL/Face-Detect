@@ -1,0 +1,18 @@
+﻿<common:View x:Class="FaceDetectApp.Views.ProcessView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:mui="http://firstfloorsoftware.com/ModernUI"
+             xmlns:mvvm="clr-namespace:Prism.Mvvm;assembly=Prism.Wpf"
+             xmlns:common="clr-namespace:FaceDetectApp.Common"
+             mc:Ignorable="d"
+             mvvm:ViewModelLocator.AutoWireViewModel="True"
+             d:DesignHeight="300" d:DesignWidth="300">
+    <StackPanel>
+        <TextBlock Text="ОБРАБОТКА..."
+                   Style="{StaticResource Heading2}" />
+        <TextBlock Text="Это может занять несколько минут."/>
+        <ProgressBar IsIndeterminate="True" Margin="-42,10,-16,0"/>
+    </StackPanel>
+</common:View>

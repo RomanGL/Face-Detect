@@ -1,0 +1,31 @@
+﻿<UserControl x:Class="FaceDetectApp.Views.ChoosePhotoView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:mui="http://firstfloorsoftware.com/ModernUI"
+             xmlns:mvvm="clr-namespace:Prism.Mvvm;assembly=Prism.Wpf"
+             mc:Ignorable="d"
+             mvvm:ViewModelLocator.AutoWireViewModel="True"
+             d:DesignHeight="300" d:DesignWidth="300">
+    
+    <StackPanel>
+        <TextBlock Text="ВЫБЕРИТЕ ФОТОГРАФИЮ"
+                   Style="{StaticResource Heading2}" />
+
+        <StackPanel Orientation="Horizontal"
+                    HorizontalAlignment="Left"
+                    Margin="0,20,0,0">
+            <Button Content="открыть..."
+                    Width="120"               
+                    Command="{Binding ChoosePhotoCommand}" />
+            <Button Content="обработать"
+                    Width="120"
+                    Command="{Binding ProcessPhotoCommand}" Margin="7,0,0,0"/>
+        </StackPanel>
+
+        <Image Width="400" Margin="0,20,0,0"
+               Source="{Binding PhotoPath}"
+               HorizontalAlignment="Left"/>
+    </StackPanel>
+</UserControl>

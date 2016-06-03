@@ -1,0 +1,27 @@
+﻿<UserControl x:Class="FaceDetectApp.Views.WelcomeView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mui="http://firstfloorsoftware.com/ModernUI"
+             mc:Ignorable="d"
+             d:DesignHeight="600"
+             d:DesignWidth="600">
+    <StackPanel VerticalAlignment="Center"
+          Margin="0,-70,0,0">
+        <TextBlock Style="{StaticResource Title}"
+                   Text="Face Detect"
+                   FontSize="60"
+                   HorizontalAlignment="Center" />
+        <TextBlock Style="{StaticResource Title}" 
+                   Text="Добро пожаловать"
+                   HorizontalAlignment="Center" 
+                   FontSize="30"/>
+        <Button Content="Начать"
+                HorizontalAlignment="Center"
+                MinWidth="120"
+                Margin="0,15,0,0" 
+                Command="NavigationCommands.GoToPage"
+                CommandParameter="/Views/ChoosePhotoView.xaml"/>
+    </StackPanel>
+</UserControl>
