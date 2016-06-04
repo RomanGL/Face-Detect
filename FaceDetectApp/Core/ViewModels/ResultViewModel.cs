@@ -59,6 +59,7 @@ namespace FaceDetectApp.Core.ViewModels
             if (faces.Length == 0)
             {
                 _messagesService.ShowMessage("Это очень милая фотография, но найти лиц на ней мы не смогли.");
+                _navigationService.Navigate("ChoosePhotoView");
                 return;
             }
 

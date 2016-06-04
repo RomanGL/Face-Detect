@@ -86,10 +86,9 @@ namespace FaceDetectApp.Core
             string path = GetPhotoPath();
             if (path != null)
             {
+                Reset();
                 PhotoPath = path;
                 PhotoSelected = true;
-                HasResult = false;
-                Result = null;
                 success = true;
             }
             else
